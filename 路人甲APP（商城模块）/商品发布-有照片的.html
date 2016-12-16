@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>有照片的</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- 日历插件 -->
+	<link href="css/mobiscroll.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+	<!-- 日历插件 -->
+	<script src="js/mobiscroll.min.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			FastClick.attach(document.body);  
+
+			// 上传图片
+			var file = $('#file');
+			var lists = $('#lists');
+
+			file.change(function() {
+
+				//存取img的路径
+
+				var isVal = $(this).val().split('\\')
+				var isM = isVal[isVal.length-1];
+
+				var isLi = $("<li><img src=images/"+isM+" ></li>");
+
+				lists.prepend(isLi)
+
+			});
+
+			// 日历的插架
+			var currYear = (new Date()).getFullYear();
+			var opt={};
+			//默认参数
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+		        display: 'modal', //显示方式 
+		        mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				dateOrder: 'yymmdd', //面板中日期排列格
+				dayText: '日', 
+				monthText: '月',
+				yearText: '年', 
+				lang:'zh',
+			};
+			////日期 ： 年-月-日
+			opt.date = {preset : 'date'};
+		  	$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+		  	$("#appDate1").mobiscroll($.extend(opt['date'], opt['default']));
+
+		  	// 是否促销的切换
+		  	var radios = $('#radios');
+		  	var toggleCens = $('#toggle_cens');
+		  	var aradios = radios.find('div');
+
+		  	aradios.click(function(){
+		  		$(this).addClass('radsos').siblings().removeClass('radsos');
+		  		if( aradios.eq(0).hasClass('radsos') )
+		  		{
+		  			toggleCens.show();
+		  		}else{
+
+		  			toggleCens.hide();
+		  		}
+
+		  	});
+		  	// 点击发布按钮的验证
+		  	var forms = $('form');
+		  	var Btns1 = $('#btns1');
+		  	var Files = $('#file');
+		  	var Spmc = $('#spmc');
+		  	var Fenl = $('#fenl');
+		  	var Kucu = $('#kucu');
+		  	var Yunf = $('#yunf');
+		  	var Textar = $('#textar');
+
+		  	var appDate = $("#appDate");
+		  	var appDate1 = $("#appDate1");
+		  	var cxjgs =$('#cxjgs');
+
+		  	var reg1 = /^([0-9.]+)$/;
+			var reg2 = /^([0-9]+)$/;
+
+		  	// 表单只能输入数字
+		  	Kucu.keyup(function(){
+
+		  		if( !reg2.test($(this).val()))
+		  		{
+		  			$(this).val('')
+		  		}
+		  	})
+		  	Yunf.keyup(function(){
+		  		
+		  		if( !reg1.test($(this).val()))
+		  		{
+		  			$(this).val('')
+		  		}
+		  		
+		  	})
+
+		  	Btns1.click(function(){
+
+		  		// 验证上传的路径是否为空
+		  		if( Files.val() == '' )
+		  		{
+		  			alert( '请上传图片' );
+		  			return false;
+
+		  		}else if(Spmc.val() == '' || Spmc[0].value.indexOf(' ') >= 0)
+		  		{
+		  			alert( "商品名称不能为空" );
+		  			return false;
+
+		  		}else if( Fenl.val() == '' ) {
+
+			  		alert( "分类不能为空" );
+		  			return false;	
+		  		}else if( aradios.eq(0).hasClass('radsos') ){
+
+		  			// 判断是否为促销的选中状态
+
+		  			if( appDate.val() == '' && appDate1.val() == '')
+		  			{
+		  				alert('开始结束时间不能为空' );
+		  				return false;
+		  			}else if ( cxjgs.val() == '' )
+		  			{
+		  				alert('促销价格不能为空' );
+		  				return false;
+		  			}
+		  		}
+		  		else if( Kucu.val() == '' || Kucu[0].value.indexOf(' ') >= 0)
+		  		{
+		  			alert( "库存不能为空" );
+		  			return false;	
+		  		}else if( Yunf.val() == '' || Yunf[0].value.indexOf(' ') >= 0)
+		  		{
+		  			alert( "运费不能为空" );
+		  			return false;	
+		  		}else if( Textar.val() == '' || Textar[0].value.indexOf(' ') >= 0)
+		  		{
+		  			alert( "商品描述不能为空" );
+		  			return false;	
+		  		}else{
+
+		  			
+		  			// ajax
+		  			$.post("url",
+		  			{
+		  				// form 里面的val 序列化 传入josn 
+		  				// 需要name的名称
+ 		  				FormVal:forms.serializeArray()
+
+		  			},function(data){
+
+		  				// 后台返回式数字 0 成功，1 失败 2网络延迟
+		  				if( data == 0 )
+		  				{
+		  					alert( '成功' );
+
+		  				}else if( data == 1)
+		  				{
+		  					alert( '成功' );
+		  					return false;
+		  				}else if( data == 2)
+		  				{
+		  					alert( '网络延迟' );
+		  					return false;
+		  				}
+		  			})
+		  		}
+		  	})
+			
+		})
+	</script>
+</head>
+<body>
+<!-- 头部样式 -->
+<header>
+	<div class="L_report_top clearfix">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			商品发布
+		</div>
+	</div>
+</header>
+<!-- 内容页面 -->
+<div class="yf_titles clearfix">
+	<span>添加照片</span>
+	<span>图片小于100K</span>
+</div>
+
+<!-- form表单 -->
+<form action="" id="form">
+
+	<!-- 上传图片 -->
+	<div class="yf_uploads">
+		<ul class="clearfix" id="lists">
+			<li>
+				<input type="file" id="file">
+				<img src="images/q30.png">
+			</li>
+		</ul>
+	</div>
+
+	<!-- 用户填写的内容 -->
+	<div class="froms_list">
+		<div class="commods ">
+			<a href="javascript:;" class="clearfix">
+				<span>商品名称</span>
+				<input type="text" name="spmc"  value="" id="spmc" >
+			</a>
+		</div>
+		<div class="commods ">
+			<a href="javascript:;" class="clearfix">
+				<span>分类</span>
+				<input type="text" name="fenl" disabled value="111" id="fenl" >
+			</a>
+		</div>
+		<div class="commods ">
+			<a href="javascript:;" class="clearfix">
+				<span>货号<i>（可不填）</i></span>
+				<input type="text" name="货号" disabled value="">
+			</a>
+		</div>
+		<div class="commods ">
+			<a href="javascript:;" class="clearfix">
+				<span>品牌<i>（可不填）</i></span>
+				<input type="text" name="品牌" disabled value="">
+			</a>
+		</div>
+		<div class="commods ">
+			<a href="javascript:;" class="clearfix">
+				<span>商品规格<i>（可不填）</i></span>
+				<input type="text" name="商品规格" disabled value="">
+			</a>
+		</div>
+		<div class="commods1 clearfix">
+			<span>是否为促销</span>
+			<div class="radios clearfix" id="radios">
+				<div class="rads">是</div>
+				<div class="rads radsos">否</div>
+			</div>
+		</div>
+		<!-- 切换的显示的内容 -->
+		<div class="toggle_cens" id="toggle_cens" style="display: none">
+			<div class="toggle_cens1 clearfix">
+				<span>促销时间</span>
+				<input type="text" name="start_time" id="appDate" placeholder='开始时间' />
+				<i>到</i>
+				<input type="text" name="end_time" id="appDate1" placeholder='结束时间'  />
+			</div>
+			<div class="toggle_cens1 toggle_cens2 clearfix">
+				<span>促销价格</span>
+				<i>元</i>
+				<input type="tel" name="促销价格" value="" id="cxjgs">
+			</div>
+		</div>
+
+		<div class="commods2 clearfix">
+			<span>库存</span>
+			<div class="inps clearfix">
+				<input type="tel" name="kucu" value="" id="kucu" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')";>
+				<i>件</i>
+			</div>
+		</div>
+		<div class="commods2 clearfix">
+			<span>运费</span>
+			<div class="inps clearfix">
+				<input type="tel" name="yunf" value="" id="yunf" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')";>
+				<i>元</i>
+			</div>
+		</div>
+		<div class="commods3">
+			<p>商品描述</p>
+			<textarea placeholder='请在此处填写商品描述' name="textar" id="textar"></textarea>
+		</div>
+		<!-- 提交按钮 -->
+		<div style="height: 2rem"></div>
+		<div class="yf_btns_list1">
+			<a href="javascript:;" class="fl" id="btns2">取消</a>
+			<a href="javascript:;" class="fr" id="btns1">发布</a>
+		</div>
+	</div>
+
+</form>
+
+</body>
+</html>

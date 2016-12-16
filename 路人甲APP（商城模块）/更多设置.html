@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>更多设置</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+	<style type="text/css">
+		html,body {
+			background: #eeeeee;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+	$(function(){
+			FastClick.attach(document.body);  
+			var box = $('#box');
+
+			box.click ( function (){
+
+				$(this).toggleClass('active')
+			});
+		})
+</script>
+<body>
+<!-- 头部 -->
+<header>
+	<div class="L_report_top clearfix">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			更多设置
+		</div>
+	</div>
+</header>
+<!-- 内容页面 -->
+<div class="yf_mins_lists">
+	<ul>
+		<li>
+			<a href="javascript:;">
+				<span>评价我们</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<span>联系我们</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<span>接收通知</span>
+				<div class="box" id="box">
+					<div class="openOne active">
+						<div class="openTwo"></div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<span>清除缓存</span>
+			</a>
+		</li>
+
+	</ul>
+</div>	
+<!-- 退出登录 -->
+<div class="signin_btns">
+	<a href="javascript:;">退出登录</a>
+</div>
+</body>
+</html>

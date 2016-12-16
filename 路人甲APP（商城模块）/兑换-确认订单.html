@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>确认订单</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+	<style type="text/css">
+		html,body {
+			background: #eeeeee;
+		}
+	</style>
+</head>
+<body>
+<!-- 弹框 -->
+
+<!-- 兑换成功 -->
+<div class="com_bomb_boxs" style="display: none">
+	<div class="success">
+		<p><span>支付成功</span></p>
+		<h2><a href="javascript:;">查看其他兑换商品</a></h2>
+	</div>
+</div>
+<!-- 兑换失败 -->
+<div class="com_bomb_boxs" style="display: none">
+	<div class="success fail">
+		<p><span>积分不足，兑换失败</span></p>
+		<h2><a href="javascript:;">立即充值</a></h2>
+	</div>
+</div>
+<!-- 网络延迟 -->
+<div class="com_bomb_boxs" style="display: none">
+	<div class="success fail delay">
+		<p><span>网络延迟，请刷新</span></p>
+	</div>
+</div>
+
+
+<!-- 弹框end -->
+<!-- 头部 -->
+<header>
+	<div class="L_report_top clearfix">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			确认订单
+		</div>
+	</div>
+</header>
+	<!-- 内容页面 -->
+	<div class="yf_confirm_order">
+		<div  class="yf_phones clearfix">
+			<span>大洋洋</span>
+			<em>186****1079</em>
+			<a href="javascript:;"><img src="images/q3.png"></a>
+		</div>
+		<div class="yf_addressa">
+			<span>北京市昌平区回龙观北京市昌平区回龙观北京市昌平区回昌平</span>
+		</div>
+	</div>
+	<div class="yf_bors"></div>
+	<div class="white_back"></div>
+	<!-- 商品详情 -->
+	<div class="yf_dlst">
+		<dl class="clearfix">
+			<dt><img src="images/q4.png"></dt>
+			<dd>
+				<p>买一送二 MONSTER/魔声 钻石之泪头戴式魔声耳机魔音耳机</p>
+				<div class="list_s clearfix">
+					<span>2999.00 </span>
+					<span>积分</span>
+					<em>1</em>
+					<em>×</em>
+				</div>
+			</dd>
+		</dl>
+	</div>
+	<!-- 配送方式 -->
+	<div class="yf_distribution_mode">
+		<div class="tops clearfix">
+			<span>配送方式</span>
+			<span>快递￥<em>0.00</em></span>
+		</div>
+		<div class="boms">
+			<span>合计：<em>2999.00</em><b>积分</b></span>
+		</div>
+	</div>
+	<!-- 空白格 -->
+	<div style="height: 2rem;"></div>
+	<!-- 确认支付浮框 -->
+	<div class="yf_payments">
+		<a href="javascript:;">支付</a>
+	</div>
+</body>
+</html>

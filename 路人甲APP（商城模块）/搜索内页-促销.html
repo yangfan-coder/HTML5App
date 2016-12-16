@@ -1,0 +1,156 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+	<title>搜索内页-促销</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);  
+
+		// 头部的点击二级弹出层
+		var log = $('#log');
+		var lefts_logo1_ces = $('#lefts_logo1_ces');
+
+		log.click (function(e){
+			e.stopPropagation()      
+			lefts_logo1_ces.toggle()
+
+		})
+		lefts_logo1_ces.click(function(e){
+			e.stopPropagation();      
+			$(this).show()
+		})
+		$(document).click(function(){
+			lefts_logo1_ces.hide()
+		})
+
+	})
+</script>
+<body>
+<!-- 头部 -->
+<header>
+	<div class="L_report_top">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			<input  type="text" placeholder="请输入搜索内容" value="" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="search">
+			<img src="images/l-pic6.png" alt="">
+		</div>
+		<div class="L_top_r">
+			<img src="images/q2.png" alt="" class="log" id="log">
+			<div class="lefts_logo1_ces" id="lefts_logo1_ces">
+				<div class="s_jiao"></div>
+				<ul>
+					<li>
+						<a href="javascript:;"><span>分享</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>个人资料</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>账户安全</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>设置</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- 搜索内页-促销 -->
+<section>
+	<!--导航部分-->
+	<div class="L_search_top">
+		<ul class="clearfix">
+			<li>
+				<span>全部商品</span>
+			</li>
+			<li class="on">
+				<span>促销</span>
+			</li>
+			<li>
+				<span>价格</span>
+				<em><img src="images/n_icon1.png" alt=""></em>
+				<em><img src="images/n_icon2.png" alt=""></em>
+			</li>
+			<li>
+				<span>销量</span>
+				<em><img src="images/n_icon1.png" alt=""></em>
+				<em><img src="images/n_icon2.png" alt=""></em>
+			</li>
+		</ul>
+	</div>
+	<!-- 内容部分 -->
+	<div class="L_search_con clearfix">
+		<ul class="clearfix">
+			<li>
+				<img src="images/l-bj1.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b><!-- <img src="images/l-x1.png" alt=""> --></b>
+				</div>
+			</li>
+			<li>
+				<img src="images/l-bj2.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b class="on"></b>
+				</div>
+			</li>
+			<li>
+				<img src="images/l-bj4.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b></b>
+				</div>
+			</li>
+			<li>
+				<img src="images/l-bj3.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b></b>
+				</div>
+			</li>
+			<li>
+				<img src="images/l-bj4.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b></b>
+				</div>
+			</li>
+			<li>
+				<img src="images/l-bj3.png" alt="">
+				<span>商品名称商品名称商品名称商品名称商品名称...</span>
+				<div class="L_search_list clearfix">
+					<em>¥100.00</em>
+					<b></b>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- 内容页面end -->	
+</body>
+<script>
+	$(function(){
+		FastClick.attach(document.body);
+		$(".L_search_con li").click(function() {
+			$(this).find('b').toggleClass('on');
+		});
+	});
+</script>
+</html>

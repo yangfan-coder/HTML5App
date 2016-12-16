@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>商品发布-分类页</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+	<script>
+		$(function(){
+			FastClick.attach(document.body); 
+			// 头部的点击二级弹出层
+			var log = $('#log');
+			var lefts_logo1_ces = $('#lefts_logo1_ces');
+
+			log.click (function(e){
+				e.stopPropagation()      
+				lefts_logo1_ces.toggle()
+
+			})
+			lefts_logo1_ces.click(function(e){
+				e.stopPropagation();      
+				$(this).show()
+			})
+			$(document).click(function(){
+				lefts_logo1_ces.hide()
+			}) 
+		})
+	</script>
+</head>
+<body>
+<!-- 公共的头部 -->
+<header>
+	<div class="L_report_top">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			商品发布
+		</div>
+		<div class="L_top_r">
+			<img src="images/q2.png" alt="" class="log" id="log">
+			<div class="lefts_logo1_ces" id="lefts_logo1_ces">
+				<div class="s_jiao"></div>
+				<ul>
+					<li>
+						<a href="javascript:;"><span>分享</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>个人资料</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>账户安全</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>设置</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- 内容页面 -->
+<div class="yf_commodity_classification">
+	<div class="lists1">
+		<h2><span>分类名称</span></h2>
+		<ul >
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+		</ul>
+	</div>
+	<div class="lists1">
+		<h2><span>分类名称</span></h2>
+		<ul >
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+		</ul>
+	</div>
+	<div class="lists1">
+		<h2><span>分类名称</span></h2>
+		<ul >
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+			<li class="clearfix">
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+				<a href="javascript:;">分类一</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

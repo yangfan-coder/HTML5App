@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/fastclick.js'></script>
+	<script type="text/javascript" src='js/rem_js.js'></script>
+	<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);  
+
+		// 头部的点击二级弹出层
+		var log = $('#log');
+		var lefts_logo1_ces = $('#lefts_logo1_ces');
+
+		log.click (function(e){
+			e.stopPropagation()      
+			lefts_logo1_ces.toggle()
+
+		})
+		lefts_logo1_ces.click(function(e){
+			e.stopPropagation();      
+			$(this).show()
+		})
+		$(document).click(function(){
+			lefts_logo1_ces.hide()
+		})
+
+		// 购物车的计算
+
+
+		// var shoppingcart = $('#yf_shoppingcart');
+		// var Zongjia = $('#zongjia');
+		// var aChaxs = shoppingcart.find('.chaxs');
+		// var aChaxs1 = shoppingcart.find('.chaxs1');
+		// var Selectsa = $('#selects');
+		// var aLis = shoppingcart.find('li');
+		// var chaxs = $('.chaxs');
+
+		// // 店铺选中
+		// aChaxs1.click(function(){
+		// var isY = $(this).parents('.shopping_lists').find('.chaxs');
+		// 	if( $(this).hasClass('chaxson'))
+		// 	{
+		// 		$(this).removeClass('chaxson');
+		// 		isY.removeClass('chaxson');
+		// 		Zongjia.html('0.00');
+
+		// 	}else{
+		// 		$(this).addClass('chaxson');
+		// 		isY.addClass('chaxson');
+		// 		var isT = 0;
+		// 		var isW = $(this).parents('.shopping_lists').find('.chaxs');
+		// 		var isP = $(this).parents('.shopping_lists').find('li');
+		// 		for( var l = 0 ; l<isP.length; l++ )
+		// 		{
+		// 			isT += parseFloat(isP[l].getElementsByTagName('b')[0].innerHTML);
+		// 		}
+
+		// 		Zongjia.html(isT.toFixed(2))
+		// 	}
+		// })
+
+		// // 全选
+		// Selectsa.click(function(){
+
+		// 	if($(this).hasClass('chaxson') )
+		// 	{
+		// 		// console.log(1)
+		// 		$(this).removeClass('chaxson');
+		// 		chaxs.removeClass('chaxson')
+		// 		Zongjia.html('0.00');
+		// 	}else{
+		// 		$(this).addClass('chaxson');
+
+		// 		chaxs.addClass('chaxson');
+		// 		var isT = 0;
+		// 		for( var l = 0 ; l<aLis.length; l++ )
+		// 		{
+		// 			isT += parseFloat(aLis[l].getElementsByTagName('b')[0].innerHTML);
+		// 		}
+		// 		Zongjia.html(isT.toFixed(2))
+		// 	}
+			
+		// })
+		// // 单个商品的选中状态
+		// chaxs.click(function(){
+
+		// 	if( $(this).hasClass('chaxson') )
+		// 	{
+		// 		$(this).removeClass('chaxson');
+
+		// 	}else{
+
+		// 		$(this).addClass('chaxson');
+		// 		var isB = parseFloat($(this).parents('li').find('b').html());
+		// 		js(isB)
+		// 	}
+
+		// });
+
+		// // 循环每个商品的计算
+		// for( var i = 0 ; i < aLis.length; i++)
+		// {
+		// 	Settlement(aLis[i]);
+		// }
+
+		// function Settlement(oli)
+		// {
+		// 	var oA1 = oli.getElementsByTagName('a')[0];
+		// 	var oA2 = oli.getElementsByTagName('a')[1];
+		// 	var oEm1 = oli.getElementsByTagName('em')[0];
+		// 	var oB1 = oli.getElementsByTagName('b')[0];
+
+		// 	// 获取加减的numner
+		// 	var isT = parseInt(oEm1.innerHTML);
+
+		// 	// 获取单件商品的价格
+		// 	var isN = parseFloat(oB1.innerHTML);
+
+		// 	oA2.onclick =function ()
+		// 	{
+		// 		isT++;
+		// 		oEm1.innerHTML =isT;	
+		// 		oB1.innerHTML = (isT*isN).toFixed(2);
+		// 		if( $(this).parents('li').find('.chaxs').hasClass('chaxson'))
+		// 		{
+		// 			js (oB1.innerHTML)
+		// 		}
+		// 	}
+		// 	oA1.onclick = function ()
+		// 	{
+		// 		if( isT <= 1 )
+		// 		{
+		// 			oEm1.innerHTML = 1;
+		// 		}else{
+
+		// 			isT--;
+		// 			oEm1.innerHTML =isT;	
+		// 			oB1.innerHTML = (isT*isN).toFixed(2);
+		// 			if( $(this).parents('li').find('.chaxs').hasClass('chaxson'))
+		// 			{
+		// 				js (oB1.innerHTML)
+		// 			}
+		// 		}
+		// 	}
+
+		// };
+
+		
+		// // 计算
+		// function js (sis)
+		// {
+		// 	Zongjia.html(sis) 
+		// }
+
+		
+		var yFshoppingcart = $('#yf_shoppingcart');
+		var yFsLi = yFshoppingcart.find('li');
+		var checkInputs = $('.check');
+		var checkAllInputs = $('.check-all');
+		var Zongjias = $('#zongjia');
+		var aRemoves = $('#removes');
+		var Numners = $('#numners');
+
+		// 计算
+		function getTotal()
+		{
+			// 数量
+			var seleted = 0;
+			// 价格
+			var price = 0 ;
+
+			for( var i = 0 ; i< yFsLi.length; i++)
+			{
+				if(yFsLi[i].getElementsByTagName('input')[0].checked  )
+				{
+					seleted += parseInt(yFsLi[i].getElementsByTagName('em')[0].innerHTML);
+					price += parseFloat(yFsLi[i].getElementsByTagName('b')[0].innerHTML);
+				}
+
+			}
+
+			// 赋值与总价
+			Numners[0].value = seleted;
+			Zongjias[0].innerHTML = price.toFixed(2);
+		}
+
+
+		for( var i = 0; i< checkInputs.length; i++)
+		{
+			checkInputs[i].onclick = function()
+			{
+				if( this.className === 'check-all check' )
+				{
+
+					for( var j = 0 ; j< checkInputs.length ; j++)
+					{
+						checkInputs[j].checked = this.checked;
+					}
+				}
+				// 如果有一个为勾选那么退出全选
+				if( this.checked == false )
+				{
+					checkAllInputs[0].checked = false;
+				} 
+
+				getTotal();
+			}
+
+		}
+
+		for( var i = 0; i< yFsLi.length; i++)
+		{
+			yFsLi[i].onclick = function(e)
+			{
+
+				e = e || window.event;
+				var el = e.srcElement;
+				var clas = el.className;
+
+				var ems = this.getElementsByTagName('em')[0];
+				var emsVal = parseInt(ems.innerHTML)
+				switch(clas){
+					case 'jia':
+						ems.innerHTML = emsVal + 1;
+						getSubTotal(this);
+						break;
+
+					case 'jian':
+						if( emsVal == 1)
+						{
+							ems.innerHTML = 1;
+						} 
+						else{
+							ems.innerHTML = emsVal - 1;
+						}
+						getSubTotal(this);
+						break;
+				}
+				getTotal();
+			}
+
+		}
+
+		// 小计
+		function getSubTotal (li) {
+			// 每行的单价、数量
+			var tdsVal = parseFloat(li.getElementsByTagName('b')[0].title);
+			var tdspans = parseInt(li.getElementsByTagName('em')[0].innerHTML);
+			var SubToal = parseFloat(tdsVal * tdspans);
+			var vas0 = li.getElementsByTagName('b')[0];
+			vas0.innerHTML = SubToal.toFixed(2);
+
+		};
+		// 删除
+		aRemoves.click(function(){
+
+			if( Numners[0].value != '0')
+			{
+				var conf = confirm("确定删除吗？？");
+				if(conf){
+
+					for( var i = 0 ; i < yFsLi.length; i++)
+					{
+						var inps  = yFsLi[i].getElementsByTagName('input')[0];
+						if( inps.checked)
+						{
+							yFsLi[i].remove();
+						}
+
+					}
+				}
+			}
+		})
+	})
+</script>
+</head>
+<body>
+<!-- 公共的头部 -->
+<header>
+	<div class="L_report_top">
+		<div class="L_top_l">
+			<img src="images/l-pic5.png" alt="">
+		</div>
+		<div class="L_top_c">
+			购物车
+		</div>
+		<div class="L_top_r">
+			<img src="images/q2.png" alt="" class="log" id="log">
+			<div class="lefts_logo1_ces" id="lefts_logo1_ces">
+				<div class="s_jiao"></div>
+				<ul>
+					<li>
+						<a href="javascript:;"><span>分享</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>个人资料</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>账户安全</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>设置</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- 内容页面 -->
+<div class="yf_shoppingcart" id="yf_shoppingcart">
+	<!-- 店铺商品列表 -->
+	<div class="shopping_lists">
+		<div class="shopping_lists_title clearfix">
+			<!-- <div class="chaxs1"></div> -->
+			<input type="checkbox" name="" class="">
+			<div class="chaxsname">店铺名称</div>
+		</div>
+		<ul>
+			<li class="clearfix">
+				<input type="checkbox" name="" class="check-one check">
+				<dl class="clearfix">
+					<dt><img src="images/l-bj8.png"></dt>
+					<dd>
+						<div class="chaxstext">
+							商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品
+						</div>
+						<div class="chaxsnumber clearfix">
+							<div class="chaxsnumber_span">
+								<span>¥</span>
+								<b title="100.99">100.99</b>
+							</div>
+							<div class="chaxsnumber_size">
+								<a href="javascript:;" class="jian">-</a>
+								<em>1</em>
+								<a href="javascript:;" class="jia">+</a>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<input type="checkbox" name="" class="check-one check">
+				<dl class="clearfix">
+					<dt><img src="images/l-bj8.png"></dt>
+					<dd>
+						<div class="chaxstext">
+							商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品
+						</div>
+						<div class="chaxsnumber clearfix">
+							<div class="chaxsnumber_span">
+								<span>¥</span>
+								<b title="100.99">100.99</b>
+							</div>
+							<div class="chaxsnumber_size">
+								<a href="javascript:;" class="jian">-</a>
+								<em>1</em>
+								<a href="javascript:;" class="jia">+</a>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<div class="shopping_lists">
+		<div class="shopping_lists_title clearfix">
+			<input type="checkbox" name="" class="">
+			<div class="chaxsname">店铺名称</div>
+		</div>
+		<ul>
+			<li class="clearfix">
+				<input type="checkbox" name="" class="check-one check">
+				<dl class="clearfix">
+					<dt><img src="images/l-bj8.png"></dt>
+					<dd>
+						<div class="chaxstext">
+							商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品
+						</div>
+						<div class="chaxsnumber clearfix">
+							<div class="chaxsnumber_span">
+								<span>¥</span>
+								<b title="100.99">100.99</b>
+							</div>
+							<div class="chaxsnumber_size">
+								<a href="javascript:;" class="jian">-</a>
+								<em>1</em>
+								<a href="javascript:;" class="jia">+</a>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<input type="checkbox" name="" class="check-one check">
+				<dl class="clearfix">
+					<dt><img src="images/l-bj8.png"></dt>
+					<dd>
+						<div class="chaxstext">
+							商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品
+						</div>
+						<div class="chaxsnumber clearfix">
+							<div class="chaxsnumber_span">
+								<span>¥</span>
+								<b title="100.99">100.99</b>
+							</div>
+							<div class="chaxsnumber_size">
+								<a href="javascript:;" class="jian">-</a>
+								<em>1</em>
+								<a href="javascript:;" class="jia">+</a>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<!-- 店铺商品列表end -->
+	<!--结算 -->
+	<div style="height: 2rem;"></div>
+	<div class="yf_settlement clearfix">
+		<label class="clearfix">
+			<input type="checkbox" name="" class="check-all check">
+			<i>全选</i>
+		</label>
+		<a href="javascript:;" id="removes">删除</a>
+		<a href="javascript:;" class="btns">结算</a>
+		<input type="hidden" id="numners" value="0">
+		<em>¥<b id="zongjia">0.00</b></em>
+		<span>合计：</span>
+	</div>
+</div>
+</body>
+</html>
