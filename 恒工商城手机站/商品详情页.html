@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+	<title>商品详情页</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<script src="js/rem_js.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/product_details.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="masks" id="masks">
+	<div class="masks_center">
+		<div class="masks_centeretxt" id="masks_centeretxt">这是文字</div>
+		<div class="yf_close" id="yf_close"><img src="images/q4.png"></div>
+	</div>
+</div>
+<!-- 表头 -->
+<div class="yf_header">
+	<div class="yf_header_cen clearfix">
+		<div class="imgs1"><a href="#"><img src="images/q1.png"></a></div>
+		<div class="imgs2"><span>登录商城</span></div>
+		<div class="imgs3"><a href="javascript:;"><img src="images/q2.png"></a></div>
+	</div>
+</div>
+<!-- 轮播 -->
+<div class="yf_home_carousel">
+	<!-- 真正的插件轮播图 -->
+	<div class="swiper-container">
+        <div class="swiper-wrapper yf_new_imgs">
+            <div class="swiper-slide"><a href="#"><img src="images/q49.png"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/q49.png"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/q49.png"></a></div>
+        </div>
+       
+        <div class="swiper-pagination yf_new_borders"></div>
+    </div>
+    <!--真正的插件轮播图—end -->
+</div>
+<!-- 商品的详情 -->
+<div class="yf_mall_details">
+	<div class="detailss_cens1">
+		<h2>步进电机产品12</h2>
+		<p>双12疯狂放价抢购中，洗车机限量秒杀1999，还有毛刷免费送！</p>
+	</div>
+	<div class="detailss_cens2">
+		<p class="clearfix">
+			<i>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</i><em>￥1590.00</em>
+		</p>
+		<p class="clearfix">
+			<b>产品名称：</b><span>旋转式步进电机</span>
+		</p>
+		<p class="clearfix">
+			<b>货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期：</b><span>现代或者1-N天</span>
+		</p>
+	</div>
+	<div class="detailss_cens3">
+		<div class="detailss_cens3_cen clearfix">
+			<div class="lefts_1 fl"><span>选择颜色：</span></div>
+			<div class="rights_1 fl">
+				<ul class="clearfix" id="lists1">
+					<li class="set"><a href="javascript:;"><span>红色</span></a></li>
+					<li><a href="javascript:;"><span>黄色</span></a></li>
+					<li><a href="javascript:;"><span>绿色</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="detailss_cens3_cen clearfix">
+			<div class="lefts_1 fl"><span>选择功率：</span></div>
+			<div class="rights_1 fl">
+				<ul class="clearfix" id="lists2">
+					<li class="set"><a href="javascript:;"><span>500W</span></a></li>
+					<li><a href="javascript:;"><span>500W</span></a></li>
+					<li><a href="javascript:;"><span>500W</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="detailss_cens3_cen clearfix">
+			<div class="lefts_1 fl"><span>选择型号：</span></div>
+			<div class="rights_1 fl">
+				<ul class="clearfix" id="lists3">
+					<li class="set"><a href="javascript:;"><span>AL25</span></a></li>
+					<li><a href="javascript:;"><span>AL25</span></a></li>
+					<li><a href="javascript:;"><span>AL25</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="detailss_cens3_cen clearfix">
+			<div class="lefts_1 fl"><span>机械参数：</span></div>
+			<div class="rights_1 fl">
+				<ul class="clearfix" id="lists4">
+					<li class="set"><a href="javascript:;"><span>6-365</span></a></li>
+					<li><a href="javascript:;"><span>6-365</span></a></li>
+					<li><a href="javascript:;"><span>6-365</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="detailss_cens3_cen clearfix detailss_cens3_cens">
+			<div class="lefts_1 fl"><span>购买数量：</span></div>
+			<div class="rights_1 fl">
+				<a href="javascript:;" id="jian">-</a>
+				<input type="number" id="nmb_val" value="1">
+				<a href="javascript:;" id="jia">+</a>
+			</div>
+		</div>
+	</div>
+	<div class="detailss_cens4 clearfix">
+		<div class="left_1s fl">
+			<span>（若此产品的规格参数无法满足您的需要，点击此处，我们可以   根据您的要求定制）</span>
+		</div>
+		<div class="right_2s fr"><a href="#">非标定制</a></div>
+	</div>
+</div>
+<!-- 滚动的导航 -->
+<div class="yf_lists_cen">
+	<!-- 导航 -->
+	<ul class="clearfix" id="lists_cen">
+		<li class="sets"><a href="javascript:;">产品详情</a></li>
+		<li><a href="javascript:;">规格参数</a></li>
+		<li><a href="javascript:;">用户评价</a></li>
+		<li><a href="javascript:;">技术交流</a></li>
+		<li><a href="javascript:;">售后服务</a></li>
+	</ul>
+</div>
+<!-- 切换的内容 -->
+<div class="switching_content" id="switching_content">
+	<!-- 产品详情 -->
+	<div class="yf_content new_class" >
+		<div class="yf_content_txts">
+			<p>产品简介性能说明产品简介性能，说明产品简介性能说明产品简介性能。说明产品简介性能说明产品简介性能说明产品简介性能，说明产品简介性能说明产品简介性能。说明产品简介性能说明产品简介性能说明产品简介性能，说明产品简介性能说明产品简介性能。</p>
+		</div>
+		<div class="yf_content_imgs"><img  src="images/q52.png"></div>
+		<table class="tabs_censa">
+			<tr class="tr_back">
+				<td colspan='2' align="center"><span>包装清单</span></td>
+			</tr>
+			<tr>
+				<td class="tr_back tr_back_s" align="right">包装清单</td>
+				<td>产品本机</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>使用说明书</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>保修卡</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>保修卡</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>专用定制保护膜</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>包装盒</td>
+			</tr>
+			<tr>
+				<td  class="tr_back tr_back_s">&nbsp;</td>
+				<td>其他</td>
+			</tr>
+		</table>
+		<div class="yf_imgs_list">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<dl>
+							<dt><img src="images/lpic.png"></dt>
+							<dd><span>包装展示图</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<dl>
+							<dt><img src="images/lpic.png"></dt>
+							<dd><span>包装展示图</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<dl>
+							<dt><img src="images/lpic.png"></dt>
+							<dd><span>包装展示图</span></dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 规格参数 -->
+	<div class="yf_content new_class" style="display: none;">
+		<div class="product_details">
+			<table class="tabs_censa tabs_censa2">
+				<tr class="tr_back">
+					<td colspan='2' align="center"><span>规格参数</span></td>
+				</tr>
+				<tr>
+					<td class="tr_back tr_back_s" align="right">品 牌</td>
+					<td>博世(Bosch)</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">型 号</td>
+					<td>GSB 600 RE set</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">最大直径</td>
+					<td>在砖墙中的钻孔直径 13 mm；在金属中的钻孔直径 10mm;在砖墙中的钻孔直径 13 mm</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">最大直径</td>
+					<td>0-44800 次/分钟</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">锤击率</td>
+					<td>350*300*100</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">包装尺寸(mm)</td>
+					<td>1.7</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">产品净重量（Kg）</td>
+					<td>输入功率 600 W;空载转速：0 – 2800 rpm;</td>
+				</tr>
+				<tr>
+					<td  class="tr_back tr_back_s" align="right">其他</td>
+					<td>正反转;电子调速</td>
+				</tr>
+		</table>
+		</div>
+	</div>
+	<!-- 用户评价 -->
+	<div class="new_class" style="display: none;">
+		<div class="yf_content">
+			<div class="yf_user_evaluations">
+				<div class="yf_praise clearfix">
+					<div class="yf_praise_text1 clearfix">
+						<p><span id="jd">97</span></p>
+						<p><i>好评度</i></p>
+					</div>
+					<div class="yf_praise_text1 clearfix">
+						<div class="yf_praise_text2_1">
+							<span>好评（<em class="jd">97</em>）</span>
+						</div>
+						<div class="yf_praise_text2_2">
+							<div class="progressBox" id="progressBox1">
+								<input type="hidden" class="hid_inpt" value="10">
+								<div class="progressBar" id="progressBar1"></div>
+								<div class="progressText" id="progressText1"></div>
+							</div>
+						</div>
+					</div>
+					<div class="yf_praise_text1 clearfix">
+						<div class="yf_praise_text2_1">
+							<span>中评（<em class="jd">97</em>）</span>
+						</div>
+						<div class="yf_praise_text2_2">
+							<div class="progressBox" id="progressBox2">
+								<input type="hidden" class="hid_inpt" value="40">
+								<div class="progressBar" id="progressBar2"></div>
+								<div class="progressText" id="progressText2"></div>
+							</div>
+						</div>
+					</div>
+					<div class="yf_praise_text1 clearfix">
+						<div class="yf_praise_text2_1">
+							<span>差评（<em class="jd">97</em>）</span>
+						</div>
+						<div class="yf_praise_text2_2">
+							<div class="progressBox" id="progressBox3">
+								<input type="hidden" class="hid_inpt" value="60">
+								<div class="progressBar" id="progressBar3"></div>
+								<div class="progressText" id="progressText3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="yf_evaluation_text">
+				<textarea name="" id="textareas" cols="30" rows="10" placeholder='用户评价...'></textarea>
+			</div>
+			<div class="yf_evaluation_btns clearfix">
+				<a href="javascript:;" id="btns">提交</a>
+			</div>
+		</div>
+		<div class="evaluates_cen">
+			<ul class="clearfix">
+				<li class="setss">
+					<a href="javascript:;">
+						<p>全部评价</p>
+						<p>（<span>2660</span>）</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<p>晒图</p>
+						<p>（<span>500</span>）</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<p>好评</p>
+						<p>（<span>1800</span>）</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<p>中评</p>
+						<p>（<span>300</span>）</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<p>差评</p>
+						<p>（<span>20</span>）</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="yf_evaluation_list">
+			<ul>
+				<li>
+					<div class="evaluation1"><span>yangshu</span></div>
+					<div class="evaluation2">
+						<p>好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。</p>
+					</div>
+					<div class="evaluation3">
+						<p>2016-06-1   20:26</p>
+					</div>
+				</li>
+				<li>
+					<div class="evaluation1"><span>yangshu</span></div>
+					<div class="evaluation2">
+						<p>好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。</p>
+					</div>
+					<div class="evaluation3">
+						<p>2016-06-1   20:26</p>
+					</div>
+				</li>
+				<li>
+					<div class="evaluation1"><span>yangshu</span></div>
+					<div class="evaluation2">
+						<p>好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。</p>
+					</div>
+					<div class="evaluation3">
+						<p>2016-06-1   20:26</p>
+					</div>
+				</li>
+				<li>
+					<div class="evaluation1"><span>yangshu</span></div>
+					<div class="evaluation2">
+						<p>好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。好，质量好非常好，值得拥有。</p>
+					</div>
+					<div class="evaluation3">
+						<p>2016-06-1   20:26</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 技术交流 -->
+	<div class="new_class" style="display: none;">
+		<div class="yf_technical_exchange">
+			<ul>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+				<li>
+					<h2><span>技术咨询：电机每天工作可以持续多久不造成损伤？</span></h2>
+					<p><span>2016/06/22</span></p>
+					<h3><span>技术回答：每天正常工作八小时不会对电机造成损伤，若每两小时休息十分钟有利于保护电机延长其寿命。</span>	</h3>
+					<p><span>2016/06/22</span></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 售后服务 -->
+	<div class="new_class" style="display: none;">
+		<div class="yf_after_sale_service">
+			<ul>
+				<li>
+					<h2><span>售后保障</span></h2>
+					<p><span>本产品全国联保，享受三包服务，质保期为：一年质保如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</span></p>
+				</li>
+				<li>
+					<h2><span>恒工承诺</span></h2>
+					<p><span>恒工销售并发货的商品，提供发票和相应的售后服务。请您放心购买！
+					注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与</span></p>
+				</li>
+				<li>
+					<h2><span>正品行货</span></h2>
+					<p><span>恒工向您保证所售商品均为正品行货，有发票或电子发票。</span></p>
+				</li>
+				<li>
+					<h2><span>全国联保</span></h2>
+					<p><span>凭质保证书及产品发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。恒工商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与</span></p>
+				</li>
+				<li>
+					<h2><span>无忧退换货</span></h2>
+					<p><span>客户购买恒工商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。</span></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 撑开尾部的盒子 -->
+<div class="open_cen"></div>
+<!-- 加入购物车 -->
+<div class="join_a_shopping_cart">
+	<div class="shopping_cart1"><a href="#"><img src="images/q54.png"></a></div>
+	<div class="shopping_cart2 clearfix">
+		<a href="#">加入购物车</a>
+		<a href="#">立即购买</a>
+	</div>
+</div>
+<!-- 插件的js放在下面 -->
+<script src="js/swiper.min.js"></script>
+</body>
+</html>

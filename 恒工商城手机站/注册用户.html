@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+	<title>注册用户</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/rem_js.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/register.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="masks" id="masks">
+	<div class="masks_center">
+		<div class="masks_centeretxt" id="masks_centeretxt">这是文字</div>
+		<div class="yf_close" id="yf_close"><img src="images/q4.png"></div>
+	</div>
+</div>
+<!-- 表头 -->
+<div class="yf_header">
+	<div class="yf_header_cen clearfix">
+		<div class="imgs1"><a href="#"><img src="images/q1.png"></a></div>
+		<div class="imgs2"><span>注册用户</span></div>
+		<div class="imgs3"><a href="javascript:;"><img src="images/q2.png"></a></div>
+	</div>
+</div>
+<!-- 验证区域 -->
+<div class="yf_login">
+	<div class="yf_login_inpt">
+		<input  type="text" placeholder= '公司名称' id="corporate_name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="text" placeholder='账户名' id="user_name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="password" placeholder= '密码' id="pasd1" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="password" placeholder='确认密码' id="pasd2" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="text" placeholder= '电子邮箱' id="mailbox" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="number" placeholder='手机号' id="phone_number" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt clearfix">
+		<input  type="number" placeholder='验证码' class="yf_yanzheng" id="verification_code" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+		<input class="yf_login_inpt_text" value="获取验证码" id="count_down" readonly>
+	</div>
+</div>
+<!-- 服务条款 -->
+<div class="checkbox_centere clearfix">
+	<input  type="checkbox" id="checkboxs">
+	<label class="checkbox_text" for="checkboxs">
+		我已经阅读并同意<a href="javascript:;">《恒工服务条款》</a>
+	</label>
+</div>
+<div class="yf_btns">
+	<a href="javascript:;" id="btns">立即注册</a>
+</div>
+</body>
+</html>

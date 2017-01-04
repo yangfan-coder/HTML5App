@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+	<title>登录页面</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/rem_js.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/logo.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="masks" id="masks">
+	<div class="masks_center">
+		<div class="masks_centeretxt" id="masks_centeretxt">这是文字</div>
+		<div class="yf_close" id="yf_close"><img src="images/q4.png"></div>
+	</div>
+</div>
+<!-- 表头 -->
+<div class="yf_header">
+	<div class="yf_header_cen clearfix">
+		<div class="imgs1"><a href="#"><img src="images/q1.png"></a></div>
+		<div class="imgs2"><span>登录商城</span></div>
+		<div class="imgs3"><a href="javascript:;"><img src="images/q2.png"></a></div>
+	</div>
+</div>
+<!-- 验证区域 -->
+<div class="yf_login">
+	<div class="yf_login_inpt">
+		<input  type="text" placeholder= '用户名/手机/邮箱' id="user_name" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="password" placeholder='密码' id="pasd" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+	<div class="yf_login_inpt clearfix">
+		<input  type="text" placeholder='验证码' class="yf_yanzheng" id="yf_yanzheng" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+		<img src="images/q3.png">
+	</div>
+</div>
+<div class="yf_btns">
+	<a href="javascript:;" id="btns">登录</a>
+</div>
+<div class="yf_texts clearfix">
+	<a href="#" class="fl">立即注册</a>
+	<a href="#" class="fr">忘记密码？</a>
+</div>
+<!-- 合作伙伴 -->
+<div class="yf_partnership">
+	<span>使用合作网站账号登录恒工</span>
+</div>
+<div class="yf_cooperative_business">
+	<ul class="clearfix">
+		<li><a href="#">QQ</a></li>
+		<li><a href="#">支付宝</a></li>
+		<li><a href="#">微博</a></li>
+		<li><a href="#">微信</a></li>
+	</ul>
+</div>
+</body>
+</html>

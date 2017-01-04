@@ -1,0 +1,378 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+    <title>订单管理</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/rem_js.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    
+</head>
+<body>
+<!-- 表头 -->
+<div class="yf_header">
+    <div class="yf_header_cen clearfix">
+        <div class="imgs1"><a href="#"><img src="images/q1.png"></a></div>
+        <div class="imgs2"><span>我的订单</span></div>
+        <div class="imgs3"><a href="javascript:;"><img src="images/q2.png"></a></div>
+    </div>
+</div>
+<div class="li-all">
+    <div class="liorder-mana">
+        <ul class="clearfix">
+            <li ><a href="javascript:;">全部</a></li>
+            <li ><a href="javascript:;">代付款</a></li>
+            <li > <a href="javascript:;">代发货</a></li>
+            <li class="click-on"><a href="javascript:;">待收货</a></li>
+            <li><a href="javascript:;">待评价</a></li>
+        </ul>
+    </div>
+    
+    <!-- 订单详情 -->
+    <div class="order-all">
+<!--     <!-- 全部 -->
+        <!-- <div class="order-part">
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3 clearfix">
+                            <div class="liorder-con-txt3-l">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">查看评价</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">查看评价</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">查看评价</div>
+                </div> 
+            </div>
+        </div> --> 
+        <!-- 代付款-->
+       <!--  <div class="order-part">
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1 liclick ">付款</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1 liclick ">付款</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1 liclick ">付款</div>
+                </div> 
+            </div>
+        </div> -->
+        <!-- 代发货-->
+        <!--  <div class="order-part">
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">提醒发货</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">提醒发货</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">提醒发货</div>
+                </div> 
+            </div>
+        </div> -->
+        <!-- 待收货-->
+         <div class="order-part">
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1">退换货</div>
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">确认收货</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1">退换货</div>
+                    <div class="liorder-con-an1">查看物流</div>
+                    <div class="liorder-con-an1 liclick ">确认收货</div>
+                </div> 
+            </div>
+             
+        </div>
+        <!-- 待评价 -->
+        <!-- <div class="order-part">
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1 liclick ">评价</div>
+                </div> 
+            </div>
+            <div class="liorder-con clearfix">
+                <div class="liorder-con-tit">订单编号：987987987987987</div>
+                <div class="liorder-con-order clearfix">
+                    <div class="liorder-con-pic fl"><img src="images/pic1.png"></div>
+                    <div class="liorder-con-txt fl">
+                        <div class="liorder-con-txt1">
+                        德尔福（DELPHI） 别克 雪佛兰雪佛兰雪佛兰步进电机 怠速马达 ...</div>
+                        <div class="liorder-con-txt2">某某电机专场,100W</div>
+                        <div class="liorder-con-txt3">
+                            <div class="liorder-con-txt3-l fl">¥889<span>已完成</span>
+                            </div>
+                            <div class="liorder-con-txt3-r fr">×1</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="liorder-con-an">
+                    <div class="liorder-con-an1 order-list-delete">删除</div>
+                    <div class="liorder-con-an1 liclick ">评价</div>
+                </div> 
+            </div> 
+        </div>    -->    
+    </div>
+</div>
+<!-- 撑开尾部的盒子 -->
+<div  class="open_cen"></div>
+<!--尾部 -->
+<div class="yf_tail" id="yf_tail">
+    <ul class="clearfix">
+        <li >
+            <a href="javascript:;">
+                <dl>
+                    <dt class="dts_1"></dt>
+                    <dd>主页</dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <dl>
+                    <dt class="dts_2"></dt>
+                    <dd>分类</dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <dl>
+                    <dt class="dts_3"></dt>
+                    <dd>购物车</dd>
+                </dl>
+            </a>
+        </li>
+        <li class="selecteds">
+            <a href="javascript:;">
+                <dl>
+                    <dt class="dts_4"></dt>
+                    <dd>我</dd>
+                </dl>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+
+     $(".order-list-delete").click(function(){
+         $(this).parents(".liorder-con").remove();
+    });
+</script>

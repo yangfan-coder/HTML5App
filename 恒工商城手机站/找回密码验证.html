@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+	<title>找回密码验证</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/rem_js.js"></script>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="masks" id="masks">
+	<div class="masks_center">
+		<div class="masks_centeretxt" id="masks_centeretxt">这是文字</div>
+		<div class="yf_close" id="yf_close"><img src="images/q4.png"></div>
+	</div>
+</div>
+<!-- 表头 -->
+<div class="yf_header">
+	<div class="yf_header_cen clearfix">
+		<div class="imgs1"><a href="#"><img src="images/q1.png"></a></div>
+		<div class="imgs2"><span>找回密码</span></div>
+		<div class="imgs3"><a href="javascript:;"><img src="images/q2.png"></a></div>
+	</div>
+</div>
+<!-- 面包屑 -->
+<div class="yf_retrieve_password">
+	<div class="password_tltie">
+		<a href="#">找回密码</a>
+		<span>></span>
+		<a href="#">密码设置成功</a>
+	</div>
+</div>
+<!-- 验证区域 -->
+<div class="yf_login">
+	<div class="yf_login_inpt">
+		<input  type="password" placeholder= '新密码' id="pasd1" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+		<span  class="cls">(6-12位字符)</span>
+	</div>
+	<div class="yf_login_inpt">
+		<input  type="password" placeholder='确认新密码' id="pasd2" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+	</div>
+</div>
+<div class="yf_btns">
+	<a href="javascript:;" id="btns">下一步</a>
+</div>
+<script>
+	$(function(){
+		//遮罩层 
+		var masks = $('#masks');
+		var masks_centeretxt = $('#masks_centeretxt');
+		var yf_close = $('#yf_close');
+		yf_close.click(function() {
+			masks.hide();
+		});
+		function masksShow(test)
+		{
+			masks.show()
+			masks_centeretxt.html(test);
+		}
+
+		// 验证
+		var btns = $("#btns");
+		var pasd1 = $('#pasd1');
+		var pasd2 = $('#pasd2');
+
+		// 判断密码的强度 以字母开头长度必须是6~18位
+		var reg =/^[a-zA-Z]\w{5,17}$/;
+
+		btns.click(function(){
+
+			if( !reg.test(pasd1.val()) )
+			{
+				masksShow('密码必须以字母开头长度必须是6~18位');
+				return false;
+
+			}else if(pasd2.val() !=  pasd1.val() )
+			{
+				masksShow('两次密码不一致，请重新输入');
+				return false;
+			}
+		})
+	})
+</script>
+</body>
+</html>

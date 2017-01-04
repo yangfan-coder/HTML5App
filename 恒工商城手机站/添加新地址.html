@@ -1,0 +1,157 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>添加新地址</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="js/rem_js.js"></script>
+	<script src="js/jquery.min.js"></script>
+   <script src="js/xg_passd1.js"></script>
+   <script src="js/min.js"></script>
+</head>
+<body>
+<!-- 标头 -->
+<div class="yf_public_title">
+   <div class="yf_public_title_cen clearfix">
+      <div class="title_cens1"><img src="images/q9.png"></div>
+      <div class="title_cens2"><span>添加收货地址</span></div>
+      <div class="title_cens3"><img src="images/q10.png"></div>
+   </div>
+</div>
+<div class="li_all">
+ 	<div class="li-nav">
+ 		<ul>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>收货人</div>
+ 				<div class="clearfix-r fl"><input type="text" placeholder='艾克里里' ></div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>手机号</div>
+ 				<div class="clearfix-r fl "><input type="number" placeholder='15623652365'></div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>电话</div>
+ 				<div class="clearfix-r fl"><input type="number"  min="1" max="10"></div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>省份</div>
+ 				<div class="clearfix-r fl">
+               <select name="" id="" >
+                  <option value=""></option>
+                  <option value="河北">河北</option>
+                  <option value="河北">北京</option>
+                  <option value="河北">河北</option>
+                  <option value="河北">河北</option>
+                  <option value="河北">河北</option>
+                  <option value="河北">河北</option>
+               </select>
+            </div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>城市</div>
+ 				<div class="clearfix-r fl">
+               <select name="" id="" >
+                  <option value=""></option>
+                  <option value="北京">北京</option>
+                  <option value="北京">北京</option>
+                  <option value="北京">北京</option>
+                  <option value="北京">北京</option>
+                  <option value="北京">北京</option>
+                  <option value="北京">北京</option>
+               </select>       
+            </div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>县/区</div>
+ 				<div class="clearfix-r fl">
+               <select name="" id="" >
+                  <option value=""></option>
+                  <option value="县区">县区</option>
+                  <option value="县区">县区</option>
+                  <option value="县区">县区</option>
+                  <option value="县区">县区</option>
+                  <option value="县区">县区</option>
+                  <option value="县区">县区</option>
+               </select>
+            </div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>详细地址</div>
+ 				<div class="clearfix-r fl"><input type="text"></div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em></em>邮编</div>
+ 				<div class="clearfix-r fl"><input type="numeber"  min="1" max="10"></div>
+ 			</li>
+ 			<li class="clearfix">
+ 				<div class="clearfix-l fl "><em>*</em>公司名称</div>
+ 				<div class="clearfix-r fl"><input type="text"></div>
+ 			</li>
+  		
+ 		</ul>
+ 	</div>
+ 	<div class="li-checkbox clearfix">
+ 	  <a href="javascript:;"><div class="li-checkbox-k fl" >
+       <img src="images/li-an1.png" alt=""> 
+     </div>
+ 	  <div class="li-checkbox-txt fl">设为默认地址</div></a>
+ 	</div>
+
+ 	<div class="li-button">
+ 		<button>提交</button>
+ 	</div>
+</div>
+<!-- 撑开尾部的盒子 -->
+<div  class="open_cen"></div>
+<!--尾部 -->
+<div class="yf_tail" id="yf_tail">
+   <ul class="clearfix">
+      <li >
+         <a href="javascript:;">
+            <dl>
+               <dt class="dts_1"></dt>
+               <dd>主页</dd>
+            </dl>
+         </a>
+      </li>
+      <li>
+         <a href="javascript:;">
+            <dl>
+               <dt class="dts_2"></dt>
+               <dd>分类</dd>
+            </dl>
+         </a>
+      </li>
+      <li class="selecteds">
+         <a href="javascript:;">
+            <dl>
+               <dt class="dts_3"></dt>
+               <dd>购物车</dd>
+            </dl>
+         </a>
+      </li>
+      <li>
+         <a href="javascript:;">
+            <dl>
+               <dt class="dts_4"></dt>
+               <dd>我</dd>
+            </dl>
+         </a>
+      </li>
+   </ul>
+</div>
+<!-- 点击默认地址事件 -->
+   <script>
+   $(".li-checkbox").click(function(){
+      var src = $(this).find("img").attr("src");
+      if(src === "images/li-an1.png"){
+         $(this).find("img").attr("src","images/lia2.png");
+      }else{
+         $(this).find("img").attr("src","images/li-an1.png");
+      } 
+   });
+   </script>
+</body>
+</html>
