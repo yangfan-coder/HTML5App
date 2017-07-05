@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>律师帮帮-律师详情</title>
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/mall.css">
+	<script src='js/jquery.min.js'></script>
+</head>
+<body>
+<!-- 弹出二维码 -->
+<div class="common-code" id="common-code" style="display: none;">
+	<div class="common-code-back"></div>
+	<div class="common-code-center">
+		<h2>更多操作请扫码下载APP进行操作<a href="javascript:;" onclick="HideCode();"></a></h2>
+		<div class="code-center-img">
+			<div class="img-1"><span>下载APP</span></div>
+			<div class="img-2"><span>关注公众号</span></div>
+		</div>
+	</div>
+</div>
+
+<!-- 公共的头部 -->
+<div class="nav-center">
+	<div class="nav-main clearfix">
+		<div class="nav-logo"></div>
+		<div class="nav-place" id="place">北京</div>
+		<div class="nav-login"><a href="javascript:;">登陆</a></div>
+		<div class="list">
+			<ul class="clearfix">
+				<li ><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">咨询</a></li>
+				<li><a href="javascript:;">律师说</a></li>
+				<li><a href="javascript:;">找律师</a></li>
+				<li class="set"><a href="javascript:;">法务商城</a></li>
+			</ul>
+		</div>
+		<!-- 城市的下拉列表 -->
+		<div class="city-list-enter" id="list-enter">
+			<!-- 特制小三角 -->
+			<div class="list-enter-up"></div>
+			<div class="list-enter-psd">
+				<input type="text" placeholder="请输入城市名称">
+				<div class="box">
+					<h3>热门城市</h3>
+					<ul class="clearfix">
+						<li><a href="#">全国</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">深圳</a></li>
+						<li><a href="#">重庆</a></li>
+						<li><a href="#">天津</a></li>
+						<li><a href="#">广州</a></li>
+						<li><a href="#">苏州</a></li>
+						<li><a href="#">南京</a></li>
+						<li><a href="#">杭州</a></li>
+						<li><a href="#">成都</a></li>
+						<li><a href="#">武汉</a></li>
+					</ul>
+					<h3>省份</h3>
+					<ul class="clearfix">
+					<li><a href="#">安徽</a></li>
+					<li><a href="#">北京</a></li>
+					<li><a href="#">重庆</a></li>
+					<li><a href="#">福建</a></li>
+					<li><a href="#">甘肃</a></li>
+					<li><a href="#">天津</a></li>
+					<li><a href="#">广东</a></li>
+					<li><a href="#">广西</a></li>
+					<li><a href="#">贵州</a></li>
+					<li><a href="#">海南</a></li>
+					<li><a href="#">河北</a></li>
+					<li><a href="#">河南</a></li>
+					<li><a href="#">黑龙江</a></li>
+					<li><a href="#">湖北</a></li>
+					<li><a href="#">湖南</a></li>
+					<li><a href="#">吉林</a></li>
+					<li><a href="#">江苏</a></li>
+					<li><a href="#">江西</a></li>
+					<li><a href="#">辽宁</a></li>
+					<li><a href="#">内蒙古</a></li>
+					<li><a href="#">宁夏</a></li>
+					<li><a href="#">青海</a></li>
+					<li><a href="#">山东</a></li>
+					<li><a href="#">山西</a></li>
+					<li><a href="#">陕西</a></li>
+					<li><a href="#">上海</a></li>
+					<li><a href="#">四川</a></li>
+					<li><a href="#">天津</a></li>
+					<li><a href="#">西藏</a></li>
+					<li><a href="#">新疆</a></li>
+					<li><a href="#">云南</a></li>
+					<li><a href="#">浙江</a></li>
+					<li><a href="#">香港</a></li>
+					<li><a href="#">澳门</a></li>
+					<li><a href="#">台湾</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="mall-cen mall-details-cen">
+	<div class="mall-list-center clearfix">
+		<div class="mall-details-left">
+			<div class="tltie clearfix">
+				<h2><span>法务商城</span> > <span>侯律师的商品详情</span></h2>
+				<div class="tltie-btn">
+					<a href="javascript:;" onclick="ShowCode()">购买</a>
+				</div>
+			</div>
+			<div class="solicitor-details">
+				<dl class="clearfix">
+					<dt><img src="images/q19.png"></dt>
+					<dd>
+						<div class="lvs-cen-txt clearfix">
+							<h2>侯律师</h2>
+							<a href="#" class="btn-1 set">咨询TA</a>
+							<a href="#" class="btn-2 ">关注TA</a>
+						</div>
+						<div class="solicitor-assess clearfix">
+							<ol class="clearfix xx">
+								<input type="hidden" value="1">
+								<li class="set"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							<p><span>230条评价</span></p>
+							<p>来电量：<span>32</span></p>
+							<p>商品量：<span>10</span></p>
+							<p>咨询量：<span>10</span></p>
+							<p>关注量：<span>3</span></p>
+						</div>
+						<h3 class="new-txt"><span>擅长领域：</span>劳动纠纷  婚姻家庭  私人顾问</h3>
+					</dd>
+				</dl>
+			</div>
+			<div class="solicitor-information">
+				<div class="solicitor-tltie clearfix">
+					<h2>基本信息</h2>
+					<div class="hover-img" id="h-img">
+						<img src="images/a17.png">
+						<div class="hover-img-down" id="img-down">
+							<img src="images/a18.jpg">
+							<p>扫一扫关注律师微信</p>
+						</div>
+					</div>
+				</div>
+				<p class="clearfix"><em>工作年限</em><span>3年</span></p>
+				<p class="clearfix" ><em>律&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所</em> <span>大成律师事务所</span></p>
+				<p class="clearfix" ><em>执业证号</em><span>0000000000000</span></p>
+				<p class="clearfix" ><em>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</em><span>汉东省京州市</span></p>
+				<p class="clearfix" ><em>介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绍</em><span>中华全国律师协会会员，汉东省省委12316热线法律专家，现执业于北京大成律师事务所</span></p>
+			</div>
+			<div class="details-lists solicitor-details" id="details-lists">
+				<h2>评价<span>（330）</span></h2>
+				<ul class="clearfix lists">
+					<li>解答清晰 (20)</li>
+					<li>专业认真 (20)</li>
+					<li>建议有用 (20)</li>
+					<li>回复及时 (20)</li>
+					<li>态度热情 (20)</li>
+					<li class="set">服务一般 (20)</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<h2>王大锤</h2>
+									<ol class="clearfix xx">
+										<input type="hidden" value="4">
+										<li class="set"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+									<p>侯律师很不错，沟通起来很愉快</p>
+									<h3>1小时前</h3>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<h2>王大锤</h2>
+									<ol class="clearfix xx" >
+										<input type="hidden" value="2">
+										<li class="set"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+									<p>侯律师很不错，沟通起来很愉快</p>
+									<h3>1小时前</h3>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+				<!-- 分页 -->
+				<div class="page-list">
+					<ul class="clearfix">
+						<li class="upper">上一页</li>
+						<li class="set">1</li>
+						<li>2</li>
+						<li class="border-null">...</li>
+						<li class="lower">下一页</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mall-list-center-right">
+			<div class="center-right-tltie">一键找商品</div>
+			<div class="center-right-textarea" onclick="ShowCode()">
+				<p>请输入你要咨询的问题</p>
+				<div class="textarea-button">分钟快速提问</div>
+			</div>
+			<div class="center-right-news" >
+				<h2>订单状态</h2>
+				<div id="news" class="roll">
+				<div class="center-right-pad">
+					<ul id="roll-1">
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+					</ul>
+					<ul id="roll-2">
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+					</ul>
+				</div>
+				</div>	
+			</div>
+			<div class="center-right-ware solicitor-ware">
+				<h2>热销商品</h2>
+				<ul>
+					<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+						<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+						<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+						<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+						<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+						<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="solicitor-tltie clearfix">
+									<h2>王大准</h2>
+									<p>¥	30/次</p>
+								</div>
+								<h3>工作年限：<span>3年</span></h3>
+								<h3>擅长领域：<span>劳动纠纷  婚姻家庭  私人顾问</span></h3>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="center-right-logo clearfix">
+				<div class="right-logo-1">
+					<span>下载APP</span>
+				</div>
+				<div class="right-logo-2">
+					<span>关注公众号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 尾部 -->
+<div class="footer">
+	<div class="count">
+		<span>站长统计：</span><img src="images/a11.jpg"><img src="images/a12.jpg">
+		<p>
+			<a href="#">关于律师帮帮</a> | 
+			<a href="#">联系我们</a> | 
+			<a href="#">媒体报道</a> | 
+			<a href="#">法律法规查询</a> | 
+			<a href="#">中国裁判文书网</a> | 
+			<a href="#">失信名单查询</a> | 
+			<a href="#">企业信用查询</a> | 
+			<a href="#">网站地图</a> | 
+			<a href="#">安软市场</a>
+		</p>
+		<p>
+			©2013-2113 北京法本科技有限公司 | 服务热线：400-77-12348 | 京ICP备14020133号
+		</p>
+	</div>
+</div>
+<script src='js/common-jq.js'></script>
+</body>
+</html>

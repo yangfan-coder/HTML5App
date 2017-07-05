@@ -1,0 +1,57 @@
+
+// 首页的背景图片模块
+// @include
+@mixin backs(){
+	height: 70px;
+	width: 100%;
+	background-size: 100% 100%;
+}
+
+// 首页内容的标题上下间距
+@mixin nav-tltie($L:100px,$R:130px){
+	padding-top: $L;
+	padding-bottom: $R;
+	text-align: center;
+}
+// 首页内容的标题 => h2
+@mixin nav-h2($f:40px){
+	font-size: $f;
+	color: #3d449d;
+	font-weight: normal;
+}
+// 首页内容的标题 => h3
+@mixin nav-h3($f:24px){
+	padding-top: 10px;
+	font-size: $f;
+	color: #9b9b9b;
+	font-weight: normal;
+}
+// 分类小按钮
+@mixin btn(){
+	display: block;
+    padding: 2px 5px;
+    float: left;
+    text-align: center;
+    border-radius: 7px;
+    color: #a9a9a9;
+    font-size: 12px;
+    border: 1px solid #a9a9a9;
+    margin-right: 5px;
+}
+//咨询Ta按钮
+//@include ZxBtn();
+@mixin ZxBtn(){
+
+	float: left;
+    display: block;
+    height: 23px;
+    width: 68px;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 3px;
+    border-color: #d92a2a;
+    color: #d92a2a;
+}

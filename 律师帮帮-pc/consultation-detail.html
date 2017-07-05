@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>律师帮帮-咨询详情</title>
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/mall.css">
+	<script src='js/jquery.min.js'></script>
+</head>
+<body>
+<!-- 弹出二维码 -->
+<div class="common-code" id="common-code" style="display: none;">
+	<div class="common-code-back"></div>
+	<div class="common-code-center">
+		<h2>更多操作请扫码下载APP进行操作<a href="javascript:;" onclick="HideCode();"></a></h2>
+		<div class="code-center-img">
+			<div class="img-1"><span>下载APP</span></div>
+			<div class="img-2"><span>关注公众号</span></div>
+		</div>
+	</div>
+</div>
+
+<!-- 公共的头部 -->
+<div class="nav-center">
+	<div class="nav-main clearfix">
+		<div class="nav-logo"></div>
+		<div class="nav-place" id="place">北京</div>
+		<div class="nav-login"><a href="javascript:;">登陆</a></div>
+		<div class="list">
+			<ul class="clearfix">
+				<li ><a href="javascript:;">首页</a></li>
+				<li class="set"><a href="javascript:;">咨询</a></li>
+				<li><a href="javascript:;">律师说</a></li>
+				<li><a href="javascript:;">找律师</a></li>
+				<li><a href="javascript:;">法务商城</a></li>
+			</ul>
+		</div>
+		<!-- 城市的下拉列表 -->
+		<div class="city-list-enter" id="list-enter">
+			<!-- 特制小三角 -->
+			<div class="list-enter-up"></div>
+			<div class="list-enter-psd">
+				<input type="text" placeholder="请输入城市名称">
+				<div class="box">
+					<h3>热门城市</h3>
+					<ul class="clearfix">
+						<li><a href="#">全国</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">深圳</a></li>
+						<li><a href="#">重庆</a></li>
+						<li><a href="#">天津</a></li>
+						<li><a href="#">广州</a></li>
+						<li><a href="#">苏州</a></li>
+						<li><a href="#">南京</a></li>
+						<li><a href="#">杭州</a></li>
+						<li><a href="#">成都</a></li>
+						<li><a href="#">武汉</a></li>
+					</ul>
+					<h3>省份</h3>
+					<ul class="clearfix">
+					<li><a href="#">安徽</a></li>
+					<li><a href="#">北京</a></li>
+					<li><a href="#">重庆</a></li>
+					<li><a href="#">福建</a></li>
+					<li><a href="#">甘肃</a></li>
+					<li><a href="#">天津</a></li>
+					<li><a href="#">广东</a></li>
+					<li><a href="#">广西</a></li>
+					<li><a href="#">贵州</a></li>
+					<li><a href="#">海南</a></li>
+					<li><a href="#">河北</a></li>
+					<li><a href="#">河南</a></li>
+					<li><a href="#">黑龙江</a></li>
+					<li><a href="#">湖北</a></li>
+					<li><a href="#">湖南</a></li>
+					<li><a href="#">吉林</a></li>
+					<li><a href="#">江苏</a></li>
+					<li><a href="#">江西</a></li>
+					<li><a href="#">辽宁</a></li>
+					<li><a href="#">内蒙古</a></li>
+					<li><a href="#">宁夏</a></li>
+					<li><a href="#">青海</a></li>
+					<li><a href="#">山东</a></li>
+					<li><a href="#">山西</a></li>
+					<li><a href="#">陕西</a></li>
+					<li><a href="#">上海</a></li>
+					<li><a href="#">四川</a></li>
+					<li><a href="#">天津</a></li>
+					<li><a href="#">西藏</a></li>
+					<li><a href="#">新疆</a></li>
+					<li><a href="#">云南</a></li>
+					<li><a href="#">浙江</a></li>
+					<li><a href="#">香港</a></li>
+					<li><a href="#">澳门</a></li>
+					<li><a href="#">台湾</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="mall-cen">
+	<!-- 筛选列表 -->
+	<div class="mall-list-center clearfix consult-list-cen">
+		<div class="consultation-details">
+			<div class="details-ico">咨询 > 蔡**的咨询</div>
+			<div class="consultation-character">
+				<dl class="clearfix">
+					<dt><img src="images/q19.png"></dt>
+					<dd>
+						<div class="tltie clearfix">
+							<span>蔡蔡蔡</span>
+							<p>已采纳</p>
+							<em>赏金￥10</em>
+						</div>
+						<div class="cen-text">
+							高小琴联合丁义珍，强取豪夺用几千万夺取工人们几个亿的股权。我该怎么办。
+						</div>
+						<div class="character-btns">
+							<span>民事类</span>
+							<span>综合</span>
+							<em>6小时前</em>
+							<em class="btn-1">北京市-东城区</em>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="details-center">
+				<h2>回复<span>（22）</span></h2>
+				<ul>
+					<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="tltie clearfix">
+									<h2>侯律师</h2>
+									<a href="#">咨询TA</a>
+								</div>
+								<!-- 排序的话 复制text-timer整体 隐藏em -->
+								<div class="text-timer">
+									<div class="text">
+										如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<div class="timer clearfix">
+										<span>1小时前</span>
+										<em>3</em>
+									</div>
+								</div>
+								<!-- 对话 -->
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="tltie clearfix">
+									<h2>侯律师</h2>
+									<a href="#">咨询TA</a>
+								</div>
+								<!-- 排序的话 复制text-timer整体 隐藏em -->
+								<div class="text-timer">
+									<div class="text">
+										如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<div class="timer clearfix">
+										<span>1小时前</span>
+										<em>3</em>
+									</div>
+								</div>
+								<!-- 对话 -->
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="clearfix">
+							<dt><img src="images/q19.png"></dt>
+							<dd>
+								<div class="tltie clearfix">
+									<h2>侯律师</h2>
+									<a href="#">咨询TA</a>
+								</div>
+								<!-- 排序的话 复制text-timer整体 隐藏em -->
+								<div class="text-timer">
+									<div class="text">
+										如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<div class="timer clearfix">
+										<span>1小时前</span>
+										<em>3</em>
+									</div>
+								</div>
+								<!-- 对话 -->
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+								<div class="dialogue-cen">
+									<div class="dialogue-text">
+										<span>玩咖</span>回复<span>1524545</span>如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。如需要帮助，可以直接电话沟通，我将尽心尽力帮你解答。
+									</div>
+									<h3>1小时前</h3>
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<!-- 分页 -->
+				<div class="page-list">
+					<ul class="clearfix">
+						<li class="upper">上一页</li>
+						<li class="set">1</li>
+						<li>2</li>
+						<li class="border-null">...</li>
+						<li class="lower">下一页</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mall-list-center-right" style="padding:0">
+			<div class="center-right-tltie">发布咨询</div>
+			<div class="center-right-textarea" onclick="ShowCode()">
+				<p>请输入你要咨询的问题</p>
+				<div class="textarea-button">分钟快速提问</div>
+			</div>
+			<div class="center-right-news" >
+				<h2>订单状态</h2>
+				<div id="news" class="roll">
+				<div class="center-right-pad">
+					<ul id="roll-1">
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+					</ul>
+					<ul id="roll-2">
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+						<li>
+							<a href="javascript:;">186****2450采纳了韩正军律师的付费咨询回复</a>
+						</li>
+					</ul>
+				</div>
+				</div>	
+			</div>
+			<!-- 最新观点、评论 -->
+			<div class="say-list-cen" id="say-list">
+				<div class="list-cen-tab clearfix" id="tab-btn">
+					<a href="javascript:;" class="set" data-val='0'>已解决</a>
+					<em></em>
+					<a href="javascript:;" data-val='1'>最新评论</a>
+				</div>
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<em>已采纳</em>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<em>已采纳</em>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<em>已采纳</em>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<em>已采纳</em>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+										谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+				<ul style="display: none;">
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										回复 <span>侯律师：</span>谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										回复 <span>侯律师：</span>谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										回复 <span>侯律师：</span>谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										回复 <span>侯律师：</span>谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<dl class="clearfix">
+								<dt><img src="images/q19.png"></dt>
+								<dd>
+									<div class="tltie clearfix">
+										<span class="frst">王大准</span>
+										<span>10分钟前</span>
+									</div>
+									<div class="center">
+										回复 <span>侯律师：</span>谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师谢谢侯律师
+									</div>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="center-right-logo clearfix">
+				<div class="right-logo-1">
+					<span>下载APP</span>
+				</div>
+				<div class="right-logo-2">
+					<span>关注公众号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 尾部 -->
+<div class="footer">
+	<div class="count">
+		<span>站长统计：</span><img src="images/a11.jpg"><img src="images/a12.jpg">
+		<p>
+			<a href="#">关于律师帮帮</a> | 
+			<a href="#">联系我们</a> | 
+			<a href="#">媒体报道</a> | 
+			<a href="#">法律法规查询</a> | 
+			<a href="#">中国裁判文书网</a> | 
+			<a href="#">失信名单查询</a> | 
+			<a href="#">企业信用查询</a> | 
+			<a href="#">网站地图</a> | 
+			<a href="#">安软市场</a>
+		</p>
+		<p>
+			©2013-2113 北京法本科技有限公司 | 服务热线：400-77-12348 | 京ICP备14020133号
+		</p>
+	</div>
+</div>
+<script src='js/common-jq.js'></script>
+</body>
+</html>

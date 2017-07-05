@@ -1,0 +1,15 @@
+.img{background:url(../images/img.png)  no-repeat;}
+.a13{height:8px;width:13px;background-position:0 0;}
+.a15{height:12px;width:13px;background-position:0 -8px;}
+.a16{height:12px;width:13px;background-position:0 -20px;}
+.a14{height:17px;width:18px;background-position:0 -32px;}
+.a23{height:16px;width:18px;background-position:0 -49px;}
+.a17{height:22px;width:22px;background-position:0 -65px;}
+.a22{height:32px;width:32px;background-position:0 -87px;}
+.a12{height:24px;width:66px;background-position:0 -119px;}
+.a11{height:24px;width:69px;background-position:0 -143px;}
+._02{height:72px;width:96px;background-position:0 -167px;}
+._03{height:72px;width:96px;background-position:0 -239px;}
+._01{height:166px;width:178px;background-position:0 -311px;}
+._04{height:72px;width:181px;background-position:0 -477px;}
+._01{height:612px;width:600px;background-position:0 -549px;}
